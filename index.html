@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CST DEPARTMENT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/775fbe7840.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+<div id="startingPage"  class="fade-in position-relative top-0" >
+   <div class="Home-page-container">
+      <!-- .....Responsive  Navabar.... -->
+      <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold text-white" href="#"><img src="https://res.cloudinary.com/dwruawktf/image/upload/v1753422448/your__4_-removebg-preview_ftnjd0.png" width="150px" height="70px"  alt="logoImage"></a>
+
+    <button class="navbar-toggler border-white text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav d-lg-flex align-items-center">
+        <li class="nav-item">
+          <a class="nav-link custom-link " href="#">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link custom-link" href="#">STAFF DETAILS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link custom-link" href="#">SYLLABUS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link custom-link" href="#">EVENTS</a>
+        </li>
+        <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+          <a class="btn btn-login-glow w-100 w-lg-auto " id="btn-login" ><i class="fas fa-user-lock"></i></a>
+          <a class="btn btn-login-glow d-none w-80 w-lg-auto " id="btn-logout" ><i class="fa-solid fa-right-from-bracket"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+      </nav>
+      <!-- home page content -->
+      <div class="homePage" id="homePage">
+      <section class="text-white row home-section-page">
+        <div class="container ">
+          <div class="row">
+            <div class="col-md-9 col-lg-8">
+              <h1 class="display-4 fw-bold">Welcome to the Department of Computer Science</h1>
+              <p class="lead mt-3">
+                  Learn. Code. Innovate.  
+                Shape your future with us in the world of technology.
+              </p>
+              <a href="#about" class="btn btn-warning btn-lg mt-2 px-5 rounded-pill shadow">Discover More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
+      <!-- sections pages content-->
+      <div id="sectionsContainer">
+
+         <div id="spinner">
+           <div class="loader"></div>
+           <p>Loading...</p>
+         </div>
+
+         <!-- Placeholder sections -->
+         <section id="aboutSection" class="about-section position-relative"  data-src="about.html"></section>
+         <section id="contactSection"  class="position-relative"   data-src="contact.html"></section>
+         <section id="projectsSection" class="position-relative"    data-src="projects.html"></section>
+
+         <footer>© 2025 Nagendra's Portfolio</footer>
+      </div>
+  </div>
+</div>
+ 
+<!-- Login  Signup Container -->
+<div class="container py-3 d-flex align-items-center justify-content-center hide-loginFrom fade-in" id="hide-loginFrom">
+  <div class="row w-100 shadow-lg rounded-4 overflow-hidden" style="max-width: 960px;">
+
+    <!-- Left Section -->
+    <div class="col-lg-6 d-none d-lg-flex flex-column justify-content-center text-white px-5 py-3 rightSideContainer position-relative">
+          <div class="content position-relative z-1">
+             <h1 class="display-5 fw-bold text-warning mb-2 lh-sm">Welcome<br />Back</h1>
+             <p class="mt-2 mb-3 fs-5 lh-sm">
+               Join the <strong class="text-warning">Department of Computer Science</strong><br />
+               <em class="text-light">"Empowering minds through code."</em>
+             </p>
+             <div class="social-icons fs-3 mt-2">
+               <i class="fab fa-facebook-f me-4"></i>
+               <i class="fab fa-twitter me-4"></i>
+               <i class="fab fa-instagram me-4"></i>
+               <i class="fab fa-youtube"></i>
+             </div>
+          </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="col-12 col-lg-6 bg-white p-3 p-sm-3 ">
+       <div class="d-flex justify-content-end position-relative">
+        <div class="text-end close-wrapper" id="closeBtn">
+          <button type="button" class="btn-close" aria-label="Close"></button>
+          <div class="small close-text">Close</div>
+        </div>
+       </div>
+      <!-- Login Form -->
+       <form id="loginForm" class="w-100 fade-in" style="max-width: 400px; margin: auto;">
+          <h2 class="text-center text-dark fw-bold mb-3">Sign in</h2>
+
+          <div class="mb-2">
+            <label class="form-label text-dark">Email Address</label>
+            <input type="email" class="form-control rounded-3" id="emailInputFromUser" placeholder="Enter your email" required />
+            <small id="loginEmailError" class="text-danger d-none">*Enter a valid email address</small>
+          </div>
+
+         <div class="mb-2">
+           <label class="form-label text-dark">Password</label>
+           <input type="password" class="form-control rounded-3" id="passwordInputFromUser"placeholder="Enter your password" required />
+          <small id="loginPasswordError" class="text-danger d-none">*Please enter a valid password</small>
+         </div>
+
+         <div class="d-flex justify-content-between align-items-center mb-2">
+         <div class="form-check">
+           <input type="checkbox" class="form-check-input" id="rememberMe">
+           <label class="form-check-label text-dark" for="rememberMe">Remember Me</label>
+         </div>
+
+           <a href="#" id="forgotPassword" class="text-decoration-none small text-primary">Forgot password?</a>
+         </div>
+
+         <button type="submit" class="btn btn-warning w-100 text-white fw-bold mb-2 rounded-3" id="signInNowbtn">Sign in now</button>
+       
+         <div class="text-center text-muted mb-2">OR</div>
+       
+         <button type="button" class="btn btn-dark w-100 fw-semibold rounded-3">
+           <i class="fab fa-google me-2 text-danger"></i> Sign in with Google
+         </button>
+       
+         <p class="text-center mt-2 small text-muted">
+           By clicking “Sign in now” you agree to our <br />
+           <a href="#" class="text-decoration-none">Terms</a> & <a href="#" class="text-decoration-none">Privacy</a>
+         </p>
+       
+         <button id="btn-signup-submit" type="button" class="btn  btn-success w-100 fw-semibold rounded-3 mt-3">
+           Create a new account
+         </button>
+       </form>
+
+      <!-- Signup Form -->
+      <form id="signupForm" class="w-100 d-none fade-in" style="max-width: 400px; margin: auto;">
+        <h2 class="text-center text-dark fw-bold mb-4">Create Account</h2>
+
+        <div class="mb-2">
+          <label class="form-label text-dark">Full Name</label>
+          <input type="text" class="form-control rounded-3" id="nameInputForUser" placeholder="Enter your name" required />
+          <small id="nameError" class="text-danger d-none">*Name cannot be empty</small>
+        </div>
+
+        <div class="mb-2">
+          <label class="form-label text-dark">Email Address</label>
+          <input type="email" class="form-control rounded-3" id="emailInputForUser"placeholder="Enter your email" required />
+          <small id="emailError" class="text-danger d-none">*Please enter a valid email address</small>
+        </div>
+
+        <div class="mb-2">
+          <label class="form-label text-dark">Password</label>
+          <input type="password" class="form-control rounded-3" id="passwordInputForUser" placeholder="Enter password" required />
+          <small id="passwordError" class="text-danger d-none">*Password must be at least 6 characters long</small>
+        </div>
+
+        <div class="mb-2">
+          <label class="form-label text-dark">Confirm Password</label>
+          <input type="password" class="form-control rounded-3" id="passwordConfirmInputForUser" placeholder="Confirm password" required />
+          <small id="confirmPasswordError" class="text-danger d-none">*Passwords do not match</small>
+        </div>
+
+        <button type="submit" class="btn btn-warning w-100 text-white fw-bold mb-3 rounded-3" id="createAccountBtn">Create Account</button>
+      
+        <p class="text-center ">
+          <span class="text-dark">
+
+            Already have an account?
+          </span>
+           <a href="#" id="showSignIn" class="btn btn-sm btn-danger fw-semibold rounded-3 ms-2">Sign in</a>
+        </p>
+   
+      </form>
+    
+      <!-- forgot Form -->
+      <form id="forgotPasswordForm" class="w-100 mt-3 d-none fade-in" style="max-width: 400px; margin: 60px auto;">
+    <h2 class="text-center text-dark fw-bold mb-4">Forgot Password</h2>
+
+    <!-- Email + OTP Button -->
+    <div class="mb-3">
+      <label class="form-label text-dark">Email Address</label>
+      <div class="input-group">
+        <input type="email" class="form-control rounded-start-3" id="forgotEmailInput" placeholder="Enter your registered email" required />
+        <button type="button" class="btn btn-primary fw-semibold rounded-end-3" id="sendOtpBtn">Send OTP</button>
+      </div>
+    </div>
+
+    <!-- OTP -->
+ <div id="otpInputContainer" class="d-none mt-2">
+  <label for="otpInput" class="text-dark mb-1">Enter OTP</label>
+  <input type="text" id="otpInput" class="form-control" placeholder="Enter OTP">
+</div>
+
+
+    <!-- New Password -->
+    <div class="mb-3">
+      <label class="form-label text-dark">New Password</label>
+      <input type="password" class="form-control rounded-3" id="newPasswordInput" placeholder="Enter new password" required />
+    </div>
+
+    <!-- Confirm New Password -->
+    <div class="mb-3">
+      <label class="form-label text-dark">Confirm New Password</label>
+      <input type="password" class="form-control rounded-3" id="confirmNewPasswordInput" placeholder="Confirm new password" required />
+    </div>
+
+    <!-- Reset Button -->
+    <button type="submit" class="btn btn-warning w-100 text-white fw-bold mb-3 rounded-3" id="resetPasswordBtn">
+      Reset Password
+    </button>
+
+    <!-- Back to Sign In -->
+    <p class="text-center">
+      <span class="text-dark">Remembered your password?</span>
+      <a href="#" id="showSignIn2" class="btn btn-sm btn-danger fw-semibold rounded-3 ms-2">Sign in</a>
+    </p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

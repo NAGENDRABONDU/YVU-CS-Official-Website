@@ -1,0 +1,45 @@
+.stat-box {
+  height: 15vh;
+  background: linear-gradient(135deg, #ffb347, #ffcc33); /* Orange-yellow */
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+  padding: 10px;
+}
+
+.stat-box:hover {
+  transform: translateY(-6px);
+}
+
+.stat-box i {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  color:  #203a43;
+}
+
+
+.count {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  animation: fadeIn 1s ease-in;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.4); /* number glow */
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0; transform: translateY(20px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+.stat-box p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.3); /* subtle glow */
+}
