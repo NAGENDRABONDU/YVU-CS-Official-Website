@@ -1,0 +1,280 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: rgb(255, 255, 255);
+}
+
+.Home-page-container {
+  overflow: hidden;
+  height:110vh;
+
+}
+@media (max-width: 991px) {
+  .Home-page-container {
+    height: 110vh;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 576px) {
+  .Home-page-container {
+    height: 110vh;
+  }
+}
+.Home-page-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('https://res.cloudinary.com/dwruawktf/image/upload/v1753422604/home-hero_cstc7u.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.85;
+  z-index: -1;
+}
+.rightSideContainer{
+  background-image: url("https://res.cloudinary.com/dwruawktf/image/upload/v1753954170/yogiVemanaBgImage_orey08.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.rightSideContainer .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);   
+}
+
+.rightSideContainer .content {
+  z-index: 1;
+  position: relative;
+}
+/* navbar styles */
+.custom-navbar {
+  background: transparent;
+  padding: 10px 20px 10px 10px;
+}
+.navbar-nav .nav-item {
+  margin-left: 20px;
+}
+
+.custom-link {
+  color: white !important;
+  font-weight: bold;
+  transition: color 0.4s ease;
+}
+
+.custom-link:hover {
+  color: orange !important;
+}
+/* Custom style for active nav link */
+.nav-link.active,
+#btn-login.active {
+  background: linear-gradient(135deg, orange, gold);
+  color: white !important;
+  border-radius: 8px;
+  padding: 6px 14px;
+  box-shadow: 0 0 10px gold;
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* LOGIN button style */
+.btn-login-glow {
+  background: linear-gradient(135deg, rgb(255, 255, 255));
+  color: rgb(9, 9, 9);
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  text-align: center;
+}
+#btn-logout{
+   border-radius:50%;
+}
+.btn-login-glow:hover {
+  background-color: rgb(229, 177, 125);
+  font-size:20px;
+  color: orange;
+}
+.hide-loginFrom{
+  display:none !important;
+}
+.btn-login{
+  background-color:white;
+  color:orange
+}
+
+.hide{
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  #homePage .container .row {
+    justify-content: center;
+    text-align: center;
+  }
+
+  #homePage .btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 768px) {
+  .home-section-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .home-section-page .container .row {
+    justify-content: center;
+  }
+
+  .home-section-page .col-md-7 {
+    width: 100%;
+  }
+}
+
+.home-section-page {
+  margin-top: 70px;
+  margin-left:80px;
+}
+
+/* Large tablets and below */
+@media (max-width: 992px) {
+  .home-section-page {
+    margin-top: 40px;
+    margin-left:0px;
+  }
+}
+
+/* Small tablets and large mobiles */
+@media (max-width: 768px) {
+  .home-section-page {
+    margin-top: 0px;
+    padding-bottom:110px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 576px) {
+  .home-section-page {
+    margin-top: 0px;
+    padding-bottom:100px;
+  }
+}
+
+
+
+/* close button styles */
+.close-wrapper {
+  position: relative;
+}
+
+.close-text {
+  display: none;
+  font-size: 0.75rem;
+  color: #6c757d;
+  margin-top: 2px;
+}
+
+.close-wrapper:hover .btn-close {
+  filter: brightness(0) saturate(100%) invert(16%) sepia(93%) saturate(7438%) hue-rotate(355deg) brightness(93%) contrast(108%);
+}
+
+.close-wrapper:hover .close-text {
+  display: block;
+  color: red;
+}
+input:focus {
+  box-shadow: 0 0 4px #28a745;
+  border-color: #28a745;
+}
+
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* SweetAlert2 styles */
+.animated-popup {
+  border-radius: 18px !important;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  animation-duration: 0.5s;
+}
+
+.swal-title-modern {
+  font-size: 22px;
+  color: #ff4d4f;
+  font-weight: 600;
+}
+
+.swal-text-modern {
+  font-size: 16px;
+  color: #444;
+  margin-top: 8px;
+}
+
+.swal-btn-modern {
+  border-radius: 25px !important;
+  padding: 10px 25px !important;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* add sectiop pages effect */
+#sectionsContainer{
+  position:absolute;
+  top:100vh;
+  width:98dvw;
+}
+section {
+  min-height: 100vh;
+  padding: 20px 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#spinner {
+  text-align: center;
+  display: none;
+  margin: 20px 0;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ccc;
+}
